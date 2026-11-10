@@ -108,9 +108,3 @@ Para listar os modelos disponíveis na conta Groq:
 ```bash
 python check_models.py
 ```
-  um público amplo.
-
-## Licença
-
-Este projeto ainda não possui uma licença definida. Escolha uma licença antes
-de aceitar contribuições ou reutilização pública.
