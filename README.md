@@ -1,4 +1,4 @@
-# RAG Chefe
+# RAG Chefe 😎
 
 Assistente de perguntas e respostas sobre documentos PDF usando **RAG
 (Retrieval-Augmented Generation)**. O projeto transforma o conteúdo enviado
@@ -9,7 +9,9 @@ gerar respostas fundamentadas no documento.
 > processamento de documentos, busca vetorial e interface interativa em
 > Streamlit.
 
-## Demonstração
+## Demonstração 💻
+
+Disponível em: https://rag-chefe.streamlit.app
 
 1. Envie um PDF pela barra lateral.
 2. Clique em **Processar Documento**.
@@ -18,7 +20,7 @@ gerar respostas fundamentadas no documento.
 O assistente instrui o modelo a responder apenas com os trechos recuperados e
 informa quando não encontra a resposta no documento.
 
-## Tecnologias
+## Tecnologias 🔨
 
 - Python
 - Streamlit
@@ -28,7 +30,7 @@ informa quando não encontra a resposta no documento.
 - Groq
 - PyMuPDF
 
-## Arquitetura
+## Arquitetura ⚙️
 
 ```text
 app.py                  Interface Streamlit e estado da sessão
@@ -106,33 +108,6 @@ Para listar os modelos disponíveis na conta Groq:
 ```bash
 python check_models.py
 ```
-
-## Deploy no Streamlit Community Cloud
-
-1. Faça push do projeto para um repositório público ou autorizado no GitHub.
-2. Acesse [share.streamlit.io](https://share.streamlit.io/) e entre com sua
-   conta GitHub.
-3. Clique em **New app** e selecione o repositório `FranBuNeto/RAG-Chefe`.
-4. Escolha a branch e informe `app.py` como **Main file path**.
-5. Abra **Advanced settings > Secrets** e adicione:
-
-   ```toml
-   GROQ_API_KEY = "sua_chave_aqui"
-   ```
-
-6. Clique em **Deploy**.
-
-O modelo de embeddings é baixado na primeira execução, portanto o primeiro
-carregamento pode demorar. O armazenamento local do Streamlit Cloud é
-efêmero: após reinicializações, envie e processe o PDF novamente. Não
-publique `.env`, chaves de API, PDFs privados ou a pasta `chroma_db/`.
-
-## Boas práticas para evolução
-
-- Adicionar testes automatizados para ingestão e recuperação.
-- Persistir índices em storage externo caso a aplicação precise manter
-  documentos entre reinicializações.
-- Adicionar autenticação e limites de uso antes de disponibilizar o app para
   um público amplo.
 
 ## Licença
